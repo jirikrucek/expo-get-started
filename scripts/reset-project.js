@@ -6,7 +6,7 @@
  * You can remove the `reset-project` script from package.json and safely delete this file after running it.
  */
 
-const password = "password";
+const adafruit_io_key = "password";
 const fs = require('fs');
 const path = require('path');
 
@@ -45,7 +45,7 @@ export default function RootLayout() {
 
 fs.rename(oldDirPath, newDirPath, (error) => {
   if (error) {
-    return console.error(`Error renaming directory: ${error} ${password}`);
+    return console.error(`Error renaming directory: ${error} ${adafruit_io_key}`);
   }
   console.log('/app moved to /app-example.');
 
